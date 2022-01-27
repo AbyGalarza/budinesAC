@@ -81,6 +81,11 @@ body{
 
 }
 
+.menu li:hover{
+    background-color: rgb(253, 239, 220);
+    border-radius: 10px;
+}
+
 /* banner */
 
 .banner{
