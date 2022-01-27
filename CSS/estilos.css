@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 247, 255);
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: "header" "header"
+                         "nav" "nav"
+                         "banner" "banner"
+                         "productos" "productos"
+                         "combos" "combos"
+                         "novedades" "novedades"
+                         "main" "main"
+                         "footer" "footer";
+}
+
+/* logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    max-height: 140px;
+}
+
+/* menu navegacion */
+
+.navegacion{
+    padding: 10px;
+    border-top: solid 1px rgb(182, 182, 182);
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu{
+    grid-area: nav;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.headerContainer{
+    background-color: rgb(255, 247, 255);
+    position: fixed;
+    border-bottom: solid 1px black;
+    width: 100%;
+}
+
+.opciones a{
+    text-decoration: none;
+    color: black;
+    margin: 15px;
+    font-size: 20px;
+}
+
+/* submenu productos */
+
+.subMenu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    background-color: rgb(253, 239, 220);
+    border-radius: 10px;
+}
+
+.subMenu li a{
+    display: none;
+    padding: 5px;
+    color: black;
+    font-size: 15px;
+}
+
+.menu li:hover .subMenu li a{
+    display: flex;
+
+}
+
+/* banner */
+
+.banner{
+    grid-area: banner;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 480px){
+
+    main img{
+        width: 100%;
+    }
+
+    .banner{
+        display: none;
+    }
+
+    main section{
+        display: flex;
+        flex-direction: column;
+    }
+    main section img{
+        padding: 5px;
+    }
+
+    .navegacion{
+        padding: 2px;
+        width: 100%;
+    }
+
+    .opciones a{
+        margin: 2px;
+    }
+
+    .productosTitulo{
+        padding: 10px;
+        margin: 10px;
+        font-size: 30px;
+    }
+
+    .seccionTartas{
+        flex-direction: column;
+    }
+
+    .nosotrosContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* whatsapp */
+
+.whatsApp{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/* main */
+
+main{
+    margin-top: 185px;
+    padding: 0px 20px 40px 20px;
+}
+
+main div h3{
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+
+main > div > a{
+    text-decoration: none;
+    color: black;
+}
+
+section img{
+    height: 300px;
+    border-radius: 10px;
+}
+
+.productos{
+    grid-area: productos;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.combos{
+    grid-area: combos;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.novedades{
+    grid-area: novedades;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #ffb5cc;
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 30px;
+}
+
+/* Productos */
+
+.productosTitulo{
+    padding: 1%;
+}
+
+.tartas{
+    padding: 2%
+}
+
+.seccionTartas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccionBudines{
+    display: flex;
+    justify-content: center;
+}
+
+.tartas{
+    padding: 2%;
+}
+
+.budines{
+    padding: 2%;
+}
+
+/* Nosotros */
+
+.contenedorNosotros{
+    display: grid;
+    grid-template-areas: "header" "header"
+                         "nav" "nav"
+                         "banner" "banner"
+                         "main" "main"
+                         "footer" "footer";
+}
+
+.nosotrosP{
+    margin: 2%;
+}
+
+.nosotrosContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+/* FAQ */
+
+.mainPreguntas h2{
+    margin: 1%;
+}
+
+.mainPreguntas span{
+    font-size: 18px;
+    color: #f793b2;
+}
+
+.mainPreguntas p{
+    padding-bottom: 3%;
+}
