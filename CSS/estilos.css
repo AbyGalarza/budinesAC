@@ -123,8 +123,7 @@ section img{
 .productos{
     grid-area: productos;
     display: flex;
-    justify-content: space-evenly;
-    
+
 }
 
 .combos{
